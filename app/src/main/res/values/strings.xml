@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">android-trivia-app</string>
+
+    <string name="play">PLAY</string>
+    <string name="submit">SUBMIT</string>
+    <string name="next_match">NEXT MATCH</string>
+    <string name="try_again">TRY AGAIN</string>
+
+    <string name="title_android_trivia_question">Android Trivia (%1$d/%2$d)</string>
+
+    <string name="about">About</string>
+    <string name="about_text">Android Trivia will help remind you of important concepts you have learned and will learn in Android development.\n\nConsider modifying the questions and graphics to make this game your own!</string>
+</resources>

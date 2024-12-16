@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="general_margin">20dp</dimen>
+    <dimen name="top_margin">50dp</dimen>
+
+    <dimen name="header_image_height">200dp</dimen>
+    <dimen name="end_game_image_height">350dp</dimen>
+
+    <dimen name="button_text_size">20sp</dimen>
+    <dimen name="question_text_size">26sp</dimen>
+    <dimen name="radio_button_text_size">18sp</dimen>
+    <dimen name="about_text_size">18sp</dimen>
+</resources>
