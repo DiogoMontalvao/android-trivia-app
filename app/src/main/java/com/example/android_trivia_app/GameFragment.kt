@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
@@ -17,6 +15,7 @@ class GameFragment : Fragment() {
     private lateinit var binding: FragmentGameBinding
 
     data class Question(val text: String, val answers: List<String>)
+
     private val questions: MutableList<Question> = mutableListOf(
         Question(
             text = "What is Android Jetpack?",
@@ -89,6 +88,8 @@ class GameFragment : Fragment() {
 
         binding.apply {
             submitButton.setOnClickListener {
+                val correctAnswer = currentQuestion.answers[0]
+
                 val checkedButtonId = questionRadioGroup.checkedRadioButtonId
                 if (checkedButtonId == -1) return@setOnClickListener
 
@@ -99,16 +100,22 @@ class GameFragment : Fragment() {
                     fourthAnswerRadioButton.id -> answerIndex = 3
                 }
 
-                val correctAnswer = currentQuestion.answers[0]
-                if (answers[answerIndex] != correctAnswer) {
-                    navController.navigate(R.id.action_gameFragment_to_gameOverFragment)
+                val isAnswerWrong = answers[answerIndex] != correctAnswer
+                if (isAnswerWrong) {
+                    navController.navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
                     return@setOnClickListener
                 }
 
                 questionIndex++
 
-                if (questionIndex == numQuestions) {
-                    navController.navigate(R.id.action_gameFragment_to_gameWonFragment)
+                val allAnswersCorrect = questionIndex == numQuestions
+                if (allAnswersCorrect) {
+                    navController.navigate(
+                        GameFragmentDirections.actionGameFragmentToGameWonFragment(
+                            numQuestions,
+                            questionIndex
+                        )
+                    )
                     return@setOnClickListener
                 }
 

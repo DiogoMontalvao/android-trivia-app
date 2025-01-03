@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">android-trivia-app</string>
+    <string name="app_name">Android Trivia</string>
 
     <string name="play">PLAY</string>
     <string name="submit">SUBMIT</string>

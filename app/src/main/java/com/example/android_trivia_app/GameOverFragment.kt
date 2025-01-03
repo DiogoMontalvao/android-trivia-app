@@ -26,7 +26,8 @@ class GameOverFragment : Fragment() {
         binding.appToolbar.setupWithNavController(navController, appBarConfiguration)
 
         binding.tryAgainButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_gameOverFragment_to_gameFragment)
+            it.findNavController()
+                .navigate(GameOverFragmentDirections.actionGameOverFragmentToGameFragment())
         }
 
         return binding.root
