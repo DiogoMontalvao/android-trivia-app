@@ -1,5 +1,7 @@
 package com.example.android_trivia_app
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -31,13 +33,35 @@ class GameWonFragment : Fragment() {
                 .navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
         }
 
-        val args = GameWonFragmentArgs.fromBundle(requireArguments())
-        Toast.makeText(
-            context,
-            "Answers: ${args.numCorrect} / Questions: ${args.numQuestions}",
-            Toast.LENGTH_LONG
-        ).show()
+        if (noCompatibleShareActivity())
+            binding.appToolbar.menu.findItem(R.id.share).setVisible(false)
+
+        binding.appToolbar.setOnMenuItemClickListener {
+            shareSucess()
+            true
+        }
 
         return binding.root
     }
+
+    private fun getShareIntent(): Intent {
+        val args = GameWonFragmentArgs.fromBundle(requireArguments())
+
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent
+            .setType("text/plain")
+            .putExtra(
+                Intent.EXTRA_TEXT,
+                getString(R.string.share_sucess_text, args.numCorrect, args.numQuestions)
+            )
+
+        return shareIntent
+    }
+
+    private fun shareSucess() {
+        startActivity(getShareIntent())
+    }
+
+    private fun noCompatibleShareActivity() =
+        getShareIntent().resolveActivity(requireActivity().packageManager) == null
 }

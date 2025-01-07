@@ -10,4 +10,7 @@
 
     <string name="about">About</string>
     <string name="about_text">Android Trivia will help remind you of important concepts you have learned and will learn in Android development.\n\nConsider modifying the questions and graphics to make this game your own!</string>
+
+    <string name="share">Share</string>
+    <string name="share_sucess_text">I mastered #UdacityAndroidTrivia with (%1$d/%2$d) correct questions!</string>
 </resources>
