@@ -7,7 +7,7 @@
       </SelectionState>
       <SelectionState runConfigName="MainActivity">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-12-18T23:02:55.444191100Z">
+        <DropdownSelection timestamp="2025-01-08T19:57:44.750655900Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\diogo\.android\avd\Pixel_3a_XL_API_35.avd" />

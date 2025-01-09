@@ -9,16 +9,16 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import com.example.android_trivia_app.databinding.FragmentAboutBinding
+import com.example.android_trivia_app.databinding.FragmentRulesBinding
 
-class AboutFragment : Fragment() {
+class RulesFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: FragmentAboutBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_about, container, false)
+        val binding: FragmentRulesBinding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_rules, container, false)
 
         val navController = findNavController()
         val appBarConfiguration = AppBarConfiguration(navController.graph)

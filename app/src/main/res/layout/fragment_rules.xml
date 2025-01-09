@@ -5,8 +5,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:background="@color/won_game_green">
+        android:layout_marginTop="20dp">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"
@@ -22,31 +21,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="?attr/actionBarSize"
-                app:menu="@menu/winner_menu"
                 app:title="@string/app_name"
                 app:titleCentered="true"
                 app:titleTextAppearance="@style/button" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <ImageView
-            android:id="@+id/congratulationsImage"
+            android:id="@+id/rulesTriviaImage"
             android:layout_width="0dp"
-            android:layout_height="@dimen/end_game_image_height"
-            android:layout_marginHorizontal="@dimen/general_margin"
-            android:scaleType="fitCenter"
-            app:layout_constraintBottom_toTopOf="@+id/nextMatchButton"
+            android:layout_height="@dimen/header_image_height"
+            android:layout_marginTop="@dimen/top_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/appBarLayout"
-            app:srcCompat="@drawable/you_win" />
+            app:srcCompat="@drawable/trivia_rules" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/nextMatchButton"
-            style="@style/button"
-            android:text="@string/next_match"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/rulesTriviaText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/general_margin"
+            android:layout_marginTop="@dimen/general_margin"
+            android:fontFamily="@font/montserrat_medium"
+            android:justificationMode="inter_word"
+            android:text="@string/rules_text"
+            android:textSize="@dimen/about_text_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/congratulationsImage" />
+            app:layout_constraintTop_toBottomOf="@id/rulesTriviaImage" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

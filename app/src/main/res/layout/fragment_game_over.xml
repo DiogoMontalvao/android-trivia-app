@@ -5,6 +5,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
         android:background="@color/game_over_red">
 
         <com.google.android.material.appbar.AppBarLayout
@@ -22,7 +23,7 @@
                 android:minHeight="?attr/actionBarSize"
                 app:title="@string/app_name"
                 app:titleCentered="true"
-                app:titleTextAppearance="@style/button"/>
+                app:titleTextAppearance="@style/button" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <ImageView
