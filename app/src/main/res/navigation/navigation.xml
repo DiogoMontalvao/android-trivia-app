@@ -73,5 +73,5 @@
         android:id="@+id/rulesFragment"
         android:name="com.example.android_trivia_app.RulesFragment"
         android:label="Rules Trivia"
-        tools:layout = "@layout/fragment_rules"/>
+        tools:layout="@layout/fragment_rules" />
 </navigation>
