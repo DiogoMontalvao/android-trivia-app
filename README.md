@@ -12,10 +12,6 @@ Em relação ao projeto original, essa versão possui alterações na estrutura 
 ##
 ### Vídeo de apresentação:
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/76e7f715-6b97-430c-82a1-f26ac6d270d9" width="220">
+  <video src="https://github.com/user-attachments/assets/cf9c58a9-072e-49f6-b9a8-f60b0a43247f" width="220">
 </div>
 <br><br>
-
-
-
-
